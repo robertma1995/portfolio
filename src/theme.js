@@ -1,30 +1,41 @@
 const theme = {
     palette: {
         primary: {
-            main: '#cbb09c'
+            main: '#212121'
         },
         secondary: {
             main: '#ffffff'
         },
         text: {
-            primary: '#212121',
-            secondary: '#9e9e9e',
+            primary: '#69f0ae',
+            secondary: '#00c853',
         },
     },
     // closer to materialize's font (looks nicer than material-ui)
     typography: {
         fontFamily: [
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
-            'Arial',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
+            'Inconsolata',
+            `monospace`
         ].join(','),
+    },
+    overrides: {
+        // outlined white buttons turn green on hover
+        MuiButton: {
+            outlinedSecondary: {
+                '&:hover': {
+                    color: '#69f0ae'
+                }
+            }
+        },
+        // menu buttons turn green on hover
+        MuiSpeedDialAction: {
+            fab: {
+                backgroundColor: '#ffffff',
+                '&:hover': {
+                    backgroundColor: '#69f0ae'
+                }
+            }
+        }
     }
 }
 
