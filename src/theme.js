@@ -35,6 +35,13 @@ const theme = {
                     backgroundColor: '#69f0ae'
                 }
             }
+        },
+        // larger menu buttons
+        MuiFab: {
+            sizeSmall: {
+                width: '50px',
+                height: '50px'
+            }
         }
     }
 }

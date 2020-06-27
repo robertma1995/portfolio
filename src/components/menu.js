@@ -28,13 +28,13 @@ function Menu() {
             hidden
         >
             <SpeedDialAction
-                icon={<GitHubIcon color="primary"/>}
+                icon={<GitHubIcon color="primary" fontSize="large"/>}
                 tooltipTitle="/robertma1995"
                 href="https://github.com/robertma1995"
                 TooltipClasses={classes}
             />
             <SpeedDialAction
-                icon={<LinkedInIcon color="primary"/>}
+                icon={<LinkedInIcon color="primary" fontSize="large"/>}
                 tooltipTitle="/robertmajianying"
                 href="https://www.linkedin.com/in/robertmajianying/"
                 TooltipClasses={classes}
