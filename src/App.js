@@ -1,17 +1,21 @@
 import React from 'react';
 // material ui
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Box, Button, Typography } from '@material-ui/core';
-// my components
+import Box from '@material-ui/core/Box';
+// routing
+import { Switch, Route } from 'react-router-dom';
+import * as routes from './utils/routes';
+// my components/pages
 import brandTheme from './theme';
 import { Menu } from './components';
+import { About, Projects } from './pages';
 
 const theme = createMuiTheme(brandTheme);
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Box 
+            <Box
                 display="flex" 
                 flexDirection="column" 
                 height="100%" 
@@ -19,29 +23,10 @@ function App() {
                 justifyContent="center"
             >
                 <Box display="flex" flexDirection="row" justifyContent="center">
-                    <Box display="flex" flexDirection="column" alignContent="center">
-                        <Typography variant="h1" color="secondary" align="center">
-                            Robert Ma
-                        </Typography>
-                        <Typography variant="h6" color="textPrimary" align="center">
-                            Developer | Sydney, Australia
-                        </Typography>
-                        <Box
-                            display="flex" 
-                            flexDirection="row" 
-                            justifyContent="center" 
-                            style={{ marginTop: theme.spacing(6) }}
-                        >
-                            <Button 
-                                variant="outlined" 
-                                color="secondary" 
-                                size="large"
-                                style={{ border: '2px solid' }}
-                            >
-                                View Projects
-                            </Button>
-                        </Box>
-                    </Box>
+                    <Switch>
+                        <Route exact path={routes.ABOUT} component={About}></Route>
+                        <Route exact path={routes.PROJECTS} component={Projects}></Route>
+                    </Switch>
                 </Box>
             </Box>
             <Menu/>

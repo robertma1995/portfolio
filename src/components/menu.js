@@ -12,8 +12,19 @@ const useStyles = makeStyles((theme) => ({
         top: theme.spacing(1.5),
         left: theme.spacing(4),
     },
+    // make menu button icon size + tooltip smaller depending on browser width
+    // actual white circle button size defined in theme.js
     tooltip: {
-        fontSize: 15
+        fontSize: 16,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 12
+        },
+    },
+    icon: {
+        fontSize: 35,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 25
+        },
     }
 }));
 
@@ -28,13 +39,13 @@ function Menu() {
             hidden
         >
             <SpeedDialAction
-                icon={<GitHubIcon color="primary" fontSize="large"/>}
+                icon={<GitHubIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertma1995"
                 href="https://github.com/robertma1995"
                 TooltipClasses={classes}
             />
             <SpeedDialAction
-                icon={<LinkedInIcon color="primary" fontSize="large"/>}
+                icon={<LinkedInIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertmajianying"
                 href="https://www.linkedin.com/in/robertmajianying/"
                 TooltipClasses={classes}

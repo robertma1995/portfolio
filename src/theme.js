@@ -1,3 +1,7 @@
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
+
+const breakpoints = createBreakpoints({})
+
 const theme = {
     palette: {
         primary: {
@@ -11,7 +15,6 @@ const theme = {
             secondary: '#00c853',
         },
     },
-    // closer to materialize's font (looks nicer than material-ui)
     typography: {
         fontFamily: [
             'Inconsolata',
@@ -36,11 +39,15 @@ const theme = {
                 }
             }
         },
-        // larger menu buttons
+        // menu buttons change size based on browser size
         MuiFab: {
             sizeSmall: {
                 width: '50px',
-                height: '50px'
+                height: '50px',
+                [breakpoints.down('sm')]: {
+                    width: '35px',
+                    height: '35px',
+                },
             }
         }
     }
