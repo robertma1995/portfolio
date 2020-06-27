@@ -1,6 +1,6 @@
 import React from 'react';
 // material ui
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 // routing
 import { Switch, Route } from 'react-router-dom';
@@ -10,7 +10,9 @@ import brandTheme from './theme';
 import { Menu } from './components';
 import { About, Projects } from './pages';
 
-const theme = createMuiTheme(brandTheme);
+// make all typography responsive
+let theme = createMuiTheme(brandTheme);
+theme = responsiveFontSizes(theme);
 
 function App() {
     return (

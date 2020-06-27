@@ -9,19 +9,29 @@ const useStyles = makeStyles((theme) => ({
     // anchor menu to middle-left of screen
     dial: {
         position: 'absolute',
-        top: theme.spacing(1.5),
-        left: theme.spacing(4),
+        top: theme.spacing(4),
+        left: theme.spacing(3),
+        [theme.breakpoints.down('sm')]: {
+            top: theme.spacing(2),
+            left: theme.spacing(1)
+        },
     },
     // make menu button icon size + tooltip smaller depending on browser width
     // actual white circle button size defined in theme.js
     tooltip: {
         fontSize: 16,
+        [theme.breakpoints.down('md')]: {
+            fontSize: 14
+        },
         [theme.breakpoints.down('sm')]: {
             fontSize: 12
         },
     },
     icon: {
         fontSize: 35,
+        [theme.breakpoints.down('md')]: {
+            fontSize: 30
+        },
         [theme.breakpoints.down('sm')]: {
             fontSize: 25
         },
@@ -34,7 +44,7 @@ function Menu() {
         <SpeedDial
             className={classes.dial}
             ariaLabel="SpeedDial example"
-            direction="down"
+            direction="right"
             open
             hidden
         >
@@ -42,12 +52,14 @@ function Menu() {
                 icon={<GitHubIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertma1995"
                 href="https://github.com/robertma1995"
+                tooltipPlacement="bottom"
                 TooltipClasses={classes}
             />
             <SpeedDialAction
                 icon={<LinkedInIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertmajianying"
                 href="https://www.linkedin.com/in/robertmajianying/"
+                tooltipPlacement="bottom"
                 TooltipClasses={classes}
             />
         </SpeedDial>
