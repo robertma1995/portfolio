@@ -1,11 +1,20 @@
 import React from 'react';
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
+// material ui
+import { Box, Button, Container, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+// my components
+import { ProjectCard } from '../components';
 
 const useStyles = makeStyles((theme) => ({
     margin: {
-        marginTop: theme.spacing(3)
-    }
+        marginTop: theme.spacing(3),
+        [theme.breakpoints.down('md')]: {
+            marginTop: theme.spacing(2)
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(1)
+        },
+    },
 }));
 
 function Projects() {
@@ -21,13 +30,16 @@ function Projects() {
                 </Typography>
                 <Grid
                     container 
-                    spacing={2}
-                    justify="space-between"
+                    spacing={3}
+                    justify="center"
                     alignItems="center"
                     className={classes.margin}
                 >
                     <Grid item xs={6}>
-                        <p> HELLO </p>
+                        <ProjectCard projectName="hotdogs"/>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <ProjectCard projectName="hotdogs"/>
                     </Grid>
                 </Grid>
             </Box>

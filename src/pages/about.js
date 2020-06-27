@@ -1,6 +1,5 @@
 import React from 'react';
 // material ui
-import { withTheme } from '@material-ui/core';
 import { Box, Button, Typography } from '@material-ui/core';
 // routing
 import { Link } from 'react-router-dom';
@@ -36,4 +35,4 @@ function About() {
     );    
 }
 
-export default withTheme(About);
+export default About;

@@ -5,14 +5,14 @@ const breakpoints = createBreakpoints({})
 const theme = {
     palette: {
         primary: {
-            main: '#212121'
+            main: '#282828'
         },
         secondary: {
             main: '#ffffff'
         },
         text: {
-            primary: '#69f0ae',
-            secondary: '#00c853',
+            primary: '#33eb91',
+            secondary: '#757575',
         },
     },
     typography: {
@@ -47,21 +47,24 @@ const theme = {
                 },
                 margin: '20px',
                 [breakpoints.down('md')]: {
-                    margin: '15px'
+                    margin: '16px'
                 },
                 [breakpoints.down('sm')]: {
-                    margin: '10px'
+                    margin: '12px'
                 },
             }
         },
         // menu buttons change size based on browser size
         MuiFab: {
+            root: {
+                minHeight: '20px'
+            },
             sizeSmall: {
                 width: '50px',
                 height: '50px',
                 [breakpoints.down('md')]: {
-                    width: '40px',
-                    height: '40px',
+                    width: '43px',
+                    height: '43px',
                 },
                 [breakpoints.down('sm')]: {
                     width: '35px',

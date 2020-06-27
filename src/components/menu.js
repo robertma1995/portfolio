@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: theme.spacing(4),
         left: theme.spacing(3),
+        [theme.breakpoints.down('md')]: {
+            top: theme.spacing(3),
+            left: theme.spacing(2)
+        },
         [theme.breakpoints.down('sm')]: {
             top: theme.spacing(2),
             left: theme.spacing(1)
@@ -24,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: 14
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: 12
+            fontSize: 11
         },
     },
     icon: {
