@@ -5,7 +5,7 @@ const breakpoints = createBreakpoints({})
 const theme = {
     palette: {
         primary: {
-            main: '#282828'
+            main: '#242424'
         },
         secondary: {
             main: '#ffffff'
