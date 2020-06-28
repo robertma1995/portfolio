@@ -12,7 +12,7 @@ const theme = {
         },
         text: {
             primary: '#33eb91',
-            secondary: '#757575',
+            secondary: '#999999',
         },
     },
     typography: {
@@ -72,9 +72,30 @@ const theme = {
                 },
             }
         },
+        // dialog + project cards background color
         MuiPaper: {
             root: {
-                backgroundColor: "#303030",
+                backgroundColor: '#303030',
+            }
+        },
+        // adds padding to bottom of dialog content
+        MuiDialogContent: {
+            root: {
+                paddingBottom: '20px'
+            }
+        },
+        // make actions have same padding as the content
+        MuiCardActions: {
+            root: {
+                padding: '16px'
+            }
+        },
+        // anchor card actions to bottom of parent card
+        MuiCard :{
+            root: {
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
             }
         }
     }
