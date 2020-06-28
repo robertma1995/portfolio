@@ -24,7 +24,7 @@ function App() {
                         <Toolbar></Toolbar>
                     </AppBar>
                 </Box>
-                <Box display="flex" flexDirection="row" justifyContent="center" flexGrow={1} width="100%">
+                <Box display="flex" flexDirection="row" justifyContent="center" flexGrow={1}>
                     <Switch>
                         <Route exact path={routes.ABOUT} component={About}></Route>
                         <Route exact path={routes.PROJECTS} component={Projects}></Route>
