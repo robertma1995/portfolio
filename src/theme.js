@@ -71,6 +71,11 @@ const theme = {
                     height: '35px',
                 },
             }
+        },
+        MuiPaper: {
+            root: {
+                backgroundColor: "#303030",
+            }
         }
     }
 }

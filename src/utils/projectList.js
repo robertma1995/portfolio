@@ -7,6 +7,12 @@ const projects = {
         codeUrl: "https://github.com/robertma1995/secret_hotdogs_react",
         technologies: ["React.js", "Firebase", "Material-UI", "PHP", "MySQL", "Express.js", "REST API"],
     },
+    "portfolio": {
+        logoUrl: "https://www.svgrepo.com/show/191381/cat.svg",
+        demoUrl: "nothing.url",
+        codeUrl: "https://github.com/robertma1995/portfolio",
+        technologies: ["React.js", "Material-UI"],
+    },
 }
 
 export default projects;

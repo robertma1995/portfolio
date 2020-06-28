@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     marginLarge: {
         marginTop: theme.spacing(15),
         [theme.breakpoints.down('md')]: {
-            marginTop: theme.spacing(1)
+            marginTop: theme.spacing(12)
         },
         [theme.breakpoints.down('sm')]: {
             marginTop: theme.spacing(10)
@@ -48,6 +48,9 @@ function Projects() {
                     >
                         <Grid item xs={6}>
                             <ProjectCard projectName="hotdogs"/>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <ProjectCard projectName="portfolio"/>
                         </Grid>
                     </Grid>
                 </Box>
