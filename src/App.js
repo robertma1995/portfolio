@@ -1,7 +1,7 @@
 import React from 'react';
 // material ui
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
+import { AppBar, Box, Toolbar } from '@material-ui/core';
 // routing
 import { Switch, Route } from 'react-router-dom';
 import * as routes from './utils/routes';
@@ -17,14 +17,14 @@ theme = responsiveFontSizes(theme);
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Box
-                display="flex" 
-                flexDirection="column" 
-                height="100%" 
-                bgcolor="primary.main"
-                justifyContent="center"
-            >
-                <Box display="flex" flexDirection="row" justifyContent="center">
+            <Box display="flex" flexDirection="column" height="100%">
+                { /* TODO - improve: empty static appbar to force projects grid to grow down instead of push up  */}
+                <Box display="flex" width="100%">
+                    <AppBar position="static" elevation={0} color="transparent" style={{ zIndex: 0 }}>
+                        <Toolbar></Toolbar>
+                    </AppBar>
+                </Box>
+                <Box display="flex" flexDirection="row" justifyContent="center" flexGrow={1} width="100%">
                     <Switch>
                         <Route exact path={routes.ABOUT} component={About}></Route>
                         <Route exact path={routes.PROJECTS} component={Projects}></Route>

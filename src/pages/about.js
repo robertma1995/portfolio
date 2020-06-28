@@ -7,29 +7,33 @@ import * as routes from '../utils/routes';
 
 function About() {
     return (
-        <Box display="flex" flexDirection="column" alignContent="center">
-            <Typography variant="h1" color="secondary" align="center">
-                Robert Ma
-            </Typography>
-            <Typography variant="h6" color="textPrimary" align="center">
-                Developer | Sydney, Australia
-            </Typography>
-            <Box
-                display="flex" 
-                flexDirection="row" 
-                justifyContent="center" 
-                style={{ marginTop: '50px' }}
-            >
-                <Button 
-                    component={Link}
-                    to={routes.PROJECTS}
-                    variant="outlined" 
-                    color="secondary"
-                    size="large"
-                    style={{ border: '2px solid' }}
-                >
-                    View Projects
-                </Button>
+        <Box display="flex" flexDirection="column" justifyContent="center">
+            <Box display="flex" flexDirection="row" alignContent="center">
+                <Box display="flex" flexDirection="column" justifyContent="center">
+                    <Typography variant="h1" color="secondary" align="center">
+                        Robert Ma
+                    </Typography>
+                    <Typography variant="h6" color="textPrimary" align="center">
+                        Developer | Sydney, Australia
+                    </Typography>
+                    <Box
+                        display="flex" 
+                        flexDirection="row" 
+                        justifyContent="center" 
+                        style={{ marginTop: '50px' }}
+                    >
+                        <Button 
+                            component={Link}
+                            to={routes.PROJECTS}
+                            variant="outlined" 
+                            color="secondary"
+                            size="large"
+                            style={{ border: '2px solid' }}
+                        >
+                            View Projects
+                        </Button>
+                    </Box>
+                </Box>
             </Box>
         </Box>
     );    
