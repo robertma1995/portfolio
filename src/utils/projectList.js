@@ -12,7 +12,7 @@ const projects = {
     "portfolio": {
         name: "Portfolio",
         logoUrl: "https://www.svgrepo.com/show/191381/cat.svg",
-        demoUrl: "TODO.url",
+        demoUrl: "https://robertma1995.github.io/portfolio",
         codeUrl: "https://github.com/robertma1995/portfolio",
         technologies: ["React.js", "Material-UI"],
         description: "This is a showcase of my recent projects. The UI is kept as minimal and intuitive as possible. The main challenge with this app was figuring out how to make elements responsive based on viewport dimensions. \n\n React.js allows for code/component reuse, while Material-UI provides the responsiveness.",
