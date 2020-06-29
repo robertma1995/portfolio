@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 function ProjectCard(props) {
     const classes = useStyles(props);
     const project = projectList[props.projectName];
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     function handleOpen() {
         setOpen(true);
