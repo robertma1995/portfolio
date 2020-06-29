@@ -1,6 +1,6 @@
 import React from 'react';
 // material ui
-import { Box, Button, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Box, Container, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 // my components
 import { ProjectCard } from '../components';

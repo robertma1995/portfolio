@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Button, Card, CardActions, CardContent, Container, Dialog, DialogContent, Grid, Paper, Typography } from '@material-ui/core';
+// material ui
+import { Button, Card, CardActions, CardContent, Dialog, DialogContent, Grid, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import TabIcon from '@material-ui/icons/Tab';
+import CodeIcon from '@material-ui/icons/Code';
 import projectList from '../utils/projectList';
 
 const useStyles = makeStyles((theme) => ({
+    // project tile/card styling
     button: {
         padding: "unset"
     },
@@ -20,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: "100%",
         maxWidth: "100%",
     },
+    // dialog styling
     dialogImage: {
         height: 500,
         width: 500,
@@ -39,9 +43,6 @@ const useStyles = makeStyles((theme) => ({
     },
     bold: {
         fontWeight: "bold"
-    },
-    margin: {
-        marginTop: theme.spacing(2)
     },
     description: {
         height: "300px",
@@ -73,7 +74,7 @@ function ProjectCard(props) {
         <div>
             <Button color="secondary" className={classes.button} onClick={() => handleOpen()}>
                 <Paper elevation={3} className={classes.imageWrapper}>
-                    <img src={project.logoUrl} className={classes.image}/>
+                    <img src={project.logoUrl} alt="logo" className={classes.image}/>
                 </Paper>
             </Button>
             <Dialog
@@ -86,7 +87,7 @@ function ProjectCard(props) {
                 <DialogContent>
                     <Grid container alignItems="center">
                         <Grid item xs={6}>
-                            <img src={project.logoUrl} className={classes.dialogImage}/>
+                            <img src={project.logoUrl} alt="logo" className={classes.dialogImage}/>
                         </Grid>
                         <Grid item xs={6}>
                             <Card style={{ backgroundColor: "#404040" }} className={classes.card}>
@@ -107,19 +108,23 @@ function ProjectCard(props) {
                                 <CardActions>
                                     <Button 
                                         href={project.demoUrl}
+                                        target='_blank'
                                         variant="outlined" 
                                         color="secondary"
                                         size="large"
                                         style={{ border: '2px solid' }}
+                                        startIcon={<TabIcon/>}
                                     >
                                         Demo
                                     </Button>
                                     <Button 
                                         href={project.codeUrl}
+                                        target='_blank'
                                         variant="outlined" 
                                         color="secondary"
                                         size="large"
                                         style={{ border: '2px solid' }}
+                                        startIcon={<CodeIcon/>}
                                     >
                                         Code
                                     </Button>

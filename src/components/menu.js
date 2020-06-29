@@ -56,6 +56,7 @@ function Menu() {
                 icon={<GitHubIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertma1995"
                 href="https://github.com/robertma1995"
+                target='_blank'
                 tooltipPlacement="bottom"
                 TooltipClasses={classes}
             />
@@ -63,6 +64,7 @@ function Menu() {
                 icon={<LinkedInIcon color="primary" className={classes.icon}/>}
                 tooltipTitle="/robertmajianying"
                 href="https://www.linkedin.com/in/robertmajianying/"
+                target='_blank'
                 tooltipPlacement="bottom"
                 TooltipClasses={classes}
             />
