@@ -91,7 +91,8 @@ const theme = {
         MuiCardContent: {
             root: {
                 padding: '24px',
-                paddingTop: '14px'
+                paddingTop: '14px',
+                paddingRight: "12px"
             }
         },
         // make actions have same padding as the content

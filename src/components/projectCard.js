@@ -55,6 +55,10 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: "0.75rem"
         },
+    },
+    // give all dialog typography more padding to make it look like x button is tied to the dialog 
+    paddingRight: {
+        paddingRight: "24px"
     }
 }));
 
@@ -91,9 +95,14 @@ function ProjectCard(props) {
                             <img src={project.logoUrl} alt="logo" className={classes.dialogImage}/>
                         </Grid>
                         <Grid item xs={6}>
-                            <Card style={{ backgroundColor: "#404040" }} className={classes.card}>
+                            <Card square className={classes.card} style={{ backgroundColor: "#404040" }}>
                                 <CardContent>
-                                    <Box display="flex" alignItems="center" flexDirection="row" width="100%">
+                                    <Box 
+                                        display="flex" 
+                                        alignItems="center" 
+                                        flexDirection="row" 
+                                        width="100%"
+                                    >
                                         <Box flexGrow={1}>
                                             <Typography variant="h6" color="textSecondary" className={classes.bold}>
                                                 Project
@@ -105,16 +114,29 @@ function ProjectCard(props) {
                                             </IconButton>
                                         </Box>
                                     </Box>
-                                    <Typography variant="h5" color="secondary" align="center" className={classes.bold}>
+                                    <Typography 
+                                        variant="h5" 
+                                        color="secondary" 
+                                        align="center" 
+                                        className={`${classes.bold} ${classes.paddingRight}`}
+                                    >
                                         {project.name}
                                     </Typography>
-                                    <Typography variant="subtitle2" align="center">
+                                    <Typography 
+                                        variant="subtitle2" 
+                                        align="center" 
+                                        className={classes.paddingRight}
+                                    >
                                         {project.technologies.join(" | ")}
                                     </Typography>
                                     <Typography variant="h6" color="textSecondary" className={classes.bold}>
                                         About
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" className={classes.description}>
+                                    <Typography 
+                                        variant="body2"
+                                        color="textSecondary" 
+                                        className={`${classes.description} ${classes.paddingRight}`}
+                                    >
                                         {project.description}
                                     </Typography>
                                 </CardContent>
