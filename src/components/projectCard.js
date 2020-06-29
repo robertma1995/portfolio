@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 // material ui
-import { Button, Card, CardActions, CardContent, Dialog, DialogContent, Grid, Paper, Typography } from '@material-ui/core';
+import { Box, Button, Card, CardActions, CardContent, Dialog, DialogContent, Grid, IconButton, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import CloseIcon from '@material-ui/icons/Close';
 import TabIcon from '@material-ui/icons/Tab';
 import CodeIcon from '@material-ui/icons/Code';
 import projectList from '../utils/projectList';
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
 function ProjectCard(props) {
     const classes = useStyles(props);
     const project = projectList[props.projectName];
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     function handleOpen() {
         setOpen(true);
@@ -92,13 +93,25 @@ function ProjectCard(props) {
                         <Grid item xs={6}>
                             <Card style={{ backgroundColor: "#404040" }} className={classes.card}>
                                 <CardContent>
-                                    <Typography variant="h5" color="secondary" className={classes.bold}>
+                                    <Box display="flex" alignItems="center" flexDirection="row" width="100%">
+                                        <Box flexGrow={1}>
+                                            <Typography variant="h6" color="textSecondary" className={classes.bold}>
+                                                Project
+                                            </Typography>
+                                        </Box>
+                                        <Box>
+                                            <IconButton aria-label="close" size="small" onClick={() => handleClose()}>
+                                                <CloseIcon/>
+                                            </IconButton>
+                                        </Box>
+                                    </Box>
+                                    <Typography variant="h5" color="secondary" align="center" className={classes.bold}>
                                         {project.name}
                                     </Typography>
                                     <Typography variant="subtitle2" align="center">
                                         {project.technologies.join(" | ")}
                                     </Typography>
-                                    <Typography variant="h6" color="secondary" className={classes.bold}>
+                                    <Typography variant="h6" color="textSecondary" className={classes.bold}>
                                         About
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" className={classes.description}>

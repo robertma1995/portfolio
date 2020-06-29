@@ -78,16 +78,26 @@ const theme = {
                 backgroundColor: '#303030',
             }
         },
-        // adds padding to bottom of dialog content
+        // remove dialog padding - make card entire right half of dialog
         MuiDialogContent: {
             root: {
-                paddingBottom: '20px'
+                padding: "unset",
+                '&:first-child': {
+                    paddingTop: 'unset'
+                },
+            }
+        },
+        // add internal padding to card
+        MuiCardContent: {
+            root: {
+                padding: '24px',
+                paddingTop: '14px'
             }
         },
         // make actions have same padding as the content
         MuiCardActions: {
             root: {
-                padding: '16px'
+                padding: '24px'
             }
         },
         // anchor card actions to bottom of parent card
@@ -96,6 +106,15 @@ const theme = {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between'
+            }
+        },
+        // x button on dialog
+        MuiIconButton: {
+            root: {
+                color: '#999999',
+                '&:hover': {
+                    color: '#33eb91',
+                }
             }
         }
     }
