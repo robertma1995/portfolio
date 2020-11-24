@@ -112,12 +112,13 @@ const theme = {
                 justifyContent: 'space-between'
             }
         },
-        // x button on dialog
+        // x button on dialog, remove "ripple" background
         MuiIconButton: {
             root: {
                 color: '#999999',
                 '&:hover': {
                     color: '#33eb91',
+                    backgroundColor: 'transparent'
                 }
             }
         }

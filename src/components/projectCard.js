@@ -79,7 +79,12 @@ function ProjectCard(props) {
 
     return (
         <div>
-            <Button color="secondary" className={classes.button} onClick={() => handleOpen()}>
+            <Button 
+                color="secondary" 
+                className={classes.button} 
+                disableFocusRipple
+                onClick={() => handleOpen()}
+            >
                 <Paper elevation={3} className={classes.imageWrapper}>
                     <img src={project.logoUrl} alt="logo" className={classes.image}/>
                 </Paper>
@@ -111,7 +116,12 @@ function ProjectCard(props) {
                                             </Typography>
                                         </Box>
                                         <Box>
-                                            <IconButton aria-label="close" size="small" onClick={() => handleClose()}>
+                                            <IconButton 
+                                                aria-label="close" 
+                                                size="small" 
+                                                disableRipple
+                                                onClick={() => handleClose()}
+                                            >
                                                 <CloseIcon/>
                                             </IconButton>
                                         </Box>
