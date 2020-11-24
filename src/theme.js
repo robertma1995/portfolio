@@ -14,6 +14,9 @@ const theme = {
             primary: '#33eb91',
             secondary: '#999999',
         },
+        action: {
+            disabled: '#999999'
+        }
     },
     typography: {
         fontFamily: [
@@ -36,7 +39,7 @@ const theme = {
                 [breakpoints.down('sm')]: {
                     fontSize: '0.7rem'
                 },
-            }
+            },
         },
         // menu buttons turn green on hover
         MuiSpeedDialAction: {

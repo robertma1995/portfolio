@@ -54,16 +54,16 @@ function Menu() {
         >
             <SpeedDialAction
                 icon={<GitHubIcon color="primary" className={classes.icon}/>}
-                tooltipTitle="/robertma1995"
-                href="https://github.com/robertma1995"
+                tooltipTitle="/robert-jy-ma"
+                href="https://github.com/robert-jy-ma"
                 target='_blank'
                 tooltipPlacement="bottom"
                 TooltipClasses={classes}
             />
             <SpeedDialAction
                 icon={<LinkedInIcon color="primary" className={classes.icon}/>}
-                tooltipTitle="/robertmajianying"
-                href="https://www.linkedin.com/in/robertmajianying/"
+                tooltipTitle="/robert-jy-ma"
+                href="https://www.linkedin.com/in/robert-jy-ma"
                 target='_blank'
                 tooltipPlacement="bottom"
                 TooltipClasses={classes}
