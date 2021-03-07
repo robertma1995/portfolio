@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
 import TabIcon from '@material-ui/icons/Tab';
 import CodeIcon from '@material-ui/icons/Code';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import projectList from '../utils/projectList';
 
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ProjectCard(props) {
-    const { projectName, privateDemo, privateCode } = props; 
+    const { projectName, videoDemo, privateDemo, privateCode } = props; 
     const project = projectList[projectName];
     const [open, setOpen] = useState(false);
     const classes = useStyles(props);
@@ -153,18 +154,33 @@ function ProjectCard(props) {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button 
-                                        href={project.demoUrl}
-                                        target='_blank'
-                                        variant="outlined" 
-                                        color="secondary"
-                                        size="large"
-                                        style={{ border: '2px solid' }}
-                                        startIcon={privateDemo ? <VisibilityOffIcon /> : <TabIcon />}
-                                        disabled={privateDemo}
-                                    >
-                                        Demo
-                                    </Button>
+                                    { videoDemo &&
+                                        <Button 
+                                            href={project.videoUrl}
+                                            target='_blank'
+                                            variant="outlined" 
+                                            color="secondary"
+                                            size="large"
+                                            style={{ border: '2px solid' }}
+                                            startIcon={<TabIcon />}
+                                        >
+                                            Demo (video)
+                                        </Button>
+                                    }
+                                    { !videoDemo &&
+                                        <Button 
+                                            href={project.demoUrl}
+                                            target='_blank'
+                                            variant="outlined" 
+                                            color="secondary"
+                                            size="large"
+                                            style={{ border: '2px solid' }}
+                                            startIcon={privateDemo ? <VisibilityOffIcon /> : <TabIcon />}
+                                            disabled={privateDemo}
+                                        >
+                                            Demo
+                                        </Button>
+                                    }
                                     <Button 
                                         href={project.codeUrl}
                                         target='_blank'

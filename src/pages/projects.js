@@ -47,7 +47,7 @@ function Projects() {
                         className={classes.margin}
                     >
                         <Grid item xs={6}>
-                            <ProjectCard projectName="hotdogs" />
+                            <ProjectCard projectName="hotdogs" videoDemo />
                         </Grid>
                         <Grid item xs={6}>
                             <ProjectCard projectName="portfolio" />
