@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
 import TabIcon from '@material-ui/icons/Tab';
 import CodeIcon from '@material-ui/icons/Code';
-import YouTubeIcon from '@material-ui/icons/YouTube';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import projectList from '../utils/projectList';
 
