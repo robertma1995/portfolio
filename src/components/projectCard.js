@@ -4,6 +4,7 @@ import { Box, Button, Card, CardActions, CardContent, Dialog, DialogContent, Gri
 import { makeStyles } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
 import TabIcon from '@material-ui/icons/Tab';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import CodeIcon from '@material-ui/icons/Code';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import projectList from '../utils/projectList';
@@ -161,9 +162,9 @@ function ProjectCard(props) {
                                             color="secondary"
                                             size="large"
                                             style={{ border: '2px solid' }}
-                                            startIcon={<TabIcon />}
+                                            startIcon={<YouTubeIcon />}
                                         >
-                                            Demo (video)
+                                            Demo
                                         </Button>
                                     }
                                     { !videoDemo &&
